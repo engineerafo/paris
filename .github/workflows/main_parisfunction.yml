@@ -32,6 +32,7 @@ jobs:
           pushd './${{ env.PACKAGE_DIRECTORY }}'
           mvn clean package
           popd
+          tree
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
